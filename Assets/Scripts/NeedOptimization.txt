@@ -1,0 +1,1 @@
+MagicCricleModel里面多个BindableProperty绑定了相同的事件

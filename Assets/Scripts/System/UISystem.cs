@@ -30,6 +30,13 @@ namespace QFramework.Example
             go.GetComponent<InfoPopup>().Content.text = strContent;
         }
 
+        public void OpenBagUI()
+        {
+            if (openedWindow.ContainsKey(nameof(Bag))) return;
+            var go = Object.Instantiate(Resources.Load<GameObject>($"UIPrefabs/UIBagPanel"), canvasTrans);
+            openedWindow[nameof(Bag)] = go;
+        }
+
         public void CloseUI(string name)
         {
             if (!openedWindow.TryGetValue(name, out var window)) return;

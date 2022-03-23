@@ -435,6 +435,7 @@
 "Assets/Scripts/Command/InputMagicNumberCommand.cs"
 "Assets/Scripts/Command/MagicCricleViewUpdateCommand.cs"
 "Assets/Scripts/Command/SpriteHighLightCommand.cs"
+"Assets/Scripts/Controller/Bag.cs"
 "Assets/Scripts/Controller/BaseController.cs"
 "Assets/Scripts/Controller/Cricle.cs"
 "Assets/Scripts/Controller/CricleButton.cs"

@@ -17,7 +17,7 @@ namespace QFramework.Example
             {
                 MagicCricleModel Model = this.GetModel<MagicCricleModel>();
 
-                string strContent = "Model.StarValue_0: " + Model.StarValue_0 + "\nModel.StarValue_1: " + Model.StarValue_1 + "\nModel.StarValue_2: " + Model.StarValue_2;
+                string strContent = $"Model.StarValue_0: {Model.StarValue_0}\nModel.StarValue_1: {Model.StarValue_1}\nModel.StarValue_2: {Model.StarValue_2}\nDamage: {Model.AnalyzeDamage()}";
 
                 this.GetSystem<UISystem>().OpenUIInfoPopupPanel("Magic Cricle Info", strContent);
             });
@@ -41,9 +41,14 @@ namespace QFramework.Example
 
             BagButton.onClick.AddListener(() =>
             {
-                BagModel Model = this.GetModel<BagModel>();
+                this.GetSystem<UISystem>().OpenBagUI();
+            });
 
-                this.GetSystem<UISystem>().OpenUIInfoPopupPanel("Bag", Model.BagInfo());
+            ClearCricleButton.onClick.AddListener(() =>
+            {
+                MagicCricleModel magicCricleModel = this.GetModel<MagicCricleModel>();
+
+                magicCricleModel.ClearMagicCricle();
             });
         }
     }

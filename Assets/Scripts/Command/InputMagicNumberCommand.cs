@@ -17,7 +17,8 @@ namespace QFramework.Example
         }
         protected override void OnExecute()
         {
-            MagicCricleModel Model = this.GetModel<MagicCricleModel>();
+            MagicCricleModel magicCricleModel = this.GetModel<MagicCricleModel>();
+            GameRuntimeModel gameRuntimeModel = this.GetModel<GameRuntimeModel>();
 
             Debug.Log("InputMagicNumberCommand");
             if (_other == null || _other.tag != "StarNumber")
@@ -27,16 +28,17 @@ namespace QFramework.Example
             }
             Sprite[] spr = Resources.LoadAll<Sprite>($"Image/Number/Number_white_0");
             Debug.Log(spr.ToString());
+            gameRuntimeModel.MP_value.Value += _other.GetComponent<StarNumber>().Value - (_unitStyle - UnitStyle.NUMBER_1 + 1);
             _other.GetComponent<SpriteRenderer>().sprite = spr[_unitStyle - UnitStyle.NUMBER_1];
             _other.GetComponent<StarNumber>().Value = _unitStyle - UnitStyle.NUMBER_1 + 1;
 
             if (_other.transform.parent.name == "Star_1")
             {
-                Model.CountMiddleStarValue();
+                magicCricleModel.CountMiddleStarValue();
             }
             else if (_other.transform.parent.name == "Star_2")
             {
-                Model.CountOutStarValue();
+                magicCricleModel.CountOutStarValue();
             }
             else
             {

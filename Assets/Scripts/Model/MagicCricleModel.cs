@@ -276,14 +276,19 @@ namespace QFramework.Example
             return result;
         }
 
-        public void CountMiddleStarValue()
+        public float CountCoreStarValue()
         {
-            StarValue_1 = CountStarValueByOrder(CricleStarArray_1);
+            return StarValue_0;
         }
 
-        public void CountOutStarValue()
+        public float CountMiddleStarValue()
         {
-            StarValue_2 = CountStarValueByInterval(CricleStarArray_2);
+            return StarValue_1 = CountStarValueByOrder(CricleStarArray_1);
+        }
+
+        public float CountOutStarValue()
+        {
+            return StarValue_2 = CountStarValueByInterval(CricleStarArray_2);
         }
 
         public bool IsMagicCricleCompleted()
@@ -317,6 +322,39 @@ namespace QFramework.Example
             ThirdCricleElement.Value = Element.NONE;
             CricleStar_1.Value = Star.NONE;
             CricleStar_2.Value = Star.NONE;
+        }
+
+        public float AnalyzeDamage()
+        {
+            if (FirstCricleElement.Value == Element.NONE)
+            {
+                Debug.Log("FirstCricleElement.Value == Element.NONE");
+                return 0;
+            }
+
+            float damage = 0;
+
+            float[,] elementTable = new float[9, 9]{
+                {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f},
+                {0.0f, 1.5f, 1.4f, 1.2f, 1.2f, 1.4f, 1.0f, 1.0f, 0.5f},
+                {0.0f, 0.5f, 1.5f, 1.4f, 1.0f, 1.0f, 1.4f, 0.5f, 1.0f},
+                {0.0f, 1.2f, 1.0f, 1.5f, 0.5f, 1.0f, 0.5f, 1.4f, 1.0f},
+                {0.0f, 1.4f, 0.5f, 1.4f, 1.5f, 0.5f, 0.5f, 0.5f, 1.4f},
+                {0.0f, 1.4f, 1.0f, 0.5f, 0.5f, 1.5f, 1.4f, 0.5f, 1.0f},
+                {0.0f, 1.0f, 1.4f, 0.5f, 1.4f, 0.5f, 1.5f, 1.4f, 1.2f},
+                {0.0f, 1.4f, 0.5f, 1.2f, 0.5f, 0.5f, 1.4f, 1.5f, 1.0f},
+                {0.0f, 0.5f, 1.4f, 1.2f, 1.0f, 1.0f, 1.4f, 1.0f, 1.5f}
+            };
+
+            float a1 = SecondCricleElement.Value == Element.NONE ? 0 : elementTable[(int)FirstCricleElement.Value, (int)SecondCricleElement.Value];
+            float a2 = ThirdCricleElement.Value == Element.NONE ? 1 : elementTable[(int)FirstCricleElement.Value, (int)ThirdCricleElement.Value];
+
+            damage = (CountCoreStarValue() + a1 * CountMiddleStarValue()) * a2 * CountOutStarValue();
+
+            Debug.Log($"FirstCricleElement:{FirstCricleElement.Value.ToString()}, SecondCricleElement:{SecondCricleElement.Value.ToString()}, ThirdCricleElement:{ThirdCricleElement.Value.ToString()}");
+            Debug.Log($"a1:{a1}, a2:{a2}, damage:{damage}");
+
+            return damage;
         }
     }
 }

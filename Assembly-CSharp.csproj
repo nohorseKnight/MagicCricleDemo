@@ -73,6 +73,7 @@
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIGamePanel.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UISettingPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UIInfoPopupPanel.cs" />
+     <Compile Include="Assets\Scripts\Controller\ShowingMagicCricleDetail.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\5.PersistentMonoSingleton\PersistentMonoSingletonExample.cs" />
      <Compile Include="Assets\Scripts\UI\UIElementSelectPanel.cs" />
      <Compile Include="Assets\QFramework\Toolkits\TableKit\Example\TableKitExample.cs" />
@@ -81,7 +82,6 @@
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\UntilActionExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Custom\NodeActionLifetimeExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIMenuPanel.cs" />
-     <Compile Include="Assets\Scripts\Command\DragUnitHintImageUpdate.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\1.MonoSingleton\MonoSingletonExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\FSM\EnumStateMachineExample.cs" />
      <Compile Include="Assets\Scripts\UI\UIMainSelectPanel.Designer.cs" />
@@ -92,14 +92,17 @@
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\1.EventNode\EventNodeExample.cs" />
      <Compile Include="Assets\Scripts\Controller\InfoPopup.cs" />
      <Compile Include="Assets\QFramework\Toolkits\PoolKit\Example\CallPool.cs" />
+     <Compile Include="Assets\Scripts\Command\ShowMagicCricleDetailCommand.cs" />
      <Compile Include="Assets\QFramework\Toolkits\AudioKit\Example\Audio\AudioTest.cs" />
      <Compile Include="Assets\Scripts\Controller\StarNumber.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\0.Singleton\Singleton.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\UIKitExample_LoadFromResources\Scripts\UIKitExample_LoadFromResoruces.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIMenuPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\Controller\CompletedMagicCricleUnit.cs" />
      <Compile Include="Assets\Scripts\Controller\DragUnit.cs" />
      <Compile Include="Assets\Scripts\Controller\CricleButton.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitWithResKitInit.cs" />
+     <Compile Include="Assets\Scripts\Controller\Bag.cs" />
      <Compile Include="Assets\Scripts\Controller\DrawMagicCricle.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\1.LoadAssetBundleResExample\AssetBundleResExample.cs" />
      <Compile Include="Assets\Scripts\MagicCricleContext.cs" />
@@ -113,6 +116,7 @@
      <Compile Include="Assets\Scripts\Command\SpriteHighLightCommand.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\SpawnNodeExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\ResKitUIPanelTester.cs" />
+     <Compile Include="Assets\Scripts\Command\AddUnitToBagGridCommand.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIABCPanel.Designer.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIGamePanel.Designer.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\10.MultiPanelExample\Scripts\UI\UIMultiPanel.Designer.cs" />
@@ -140,7 +144,6 @@
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\2.LoadResourcesResExample\LoadResourcesResExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\DelayExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\AudioKitWithResKitInit.cs" />
-     <Compile Include="Assets\Scripts\Controller\Bag.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

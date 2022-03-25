@@ -9,6 +9,13 @@ namespace QFramework.Example
 {
     public class GameRuntimeModel : AbstractModel
     {
+        public enum State
+        {
+            Main,
+            Fighting,
+            Map,
+            Draw,
+        }
         public BindableProperty<float> HP_value = new BindableProperty<float>();
         public BindableProperty<float> HP_max = new BindableProperty<float>();
         public BindableProperty<float> MP_value = new BindableProperty<float>();

@@ -13,11 +13,13 @@ namespace QFramework.Example
             canvasTrans = Object.FindObjectOfType<Canvas>().transform;
         }
 
-        public void OpenUI(string name)
+        public GameObject OpenUI(string name)
         {
-            if (openedWindow.ContainsKey(name)) return;
+            if (openedWindow.ContainsKey(name)) return null;
             var go = Object.Instantiate(Resources.Load<GameObject>($"UIPrefabs/{name}"), canvasTrans);
             openedWindow[name] = go;
+
+            return (GameObject)go;
         }
 
         public void OpenUIInfoPopupPanel(string strTitle, string strContent)

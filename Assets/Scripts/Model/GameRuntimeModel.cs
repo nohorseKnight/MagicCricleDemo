@@ -11,15 +11,16 @@ namespace QFramework.Example
     {
         public enum State
         {
-            Main,
+            MainMenu,
             Fighting,
             Map,
-            Draw,
+            Drawing,
         }
         public BindableProperty<float> HP_value = new BindableProperty<float>();
         public BindableProperty<float> HP_max = new BindableProperty<float>();
         public BindableProperty<float> MP_value = new BindableProperty<float>();
         public BindableProperty<float> MP_max = new BindableProperty<float>();
+        public BindableProperty<State> GameState { get; } = new BindableProperty<State>(State.MainMenu);
 
         GameObject UIUpsidePanel;
         protected override void OnInit()

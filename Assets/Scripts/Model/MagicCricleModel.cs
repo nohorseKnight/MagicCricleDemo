@@ -30,8 +30,6 @@ namespace QFramework.Example
         public int StarValue_2;
         protected override void OnInit()
         {
-            MagicCricleObject = GameObject.Find("MagicCricle");
-
             FirstCricleElement.Value = Element.NONE;
             SecondCricleElement.Value = Element.NONE;
             ThirdCricleElement.Value = Element.NONE;

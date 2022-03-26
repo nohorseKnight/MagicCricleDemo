@@ -17,7 +17,7 @@ namespace QFramework.Example
             ExitButton.onClick.AddListener(() =>
             {
                 Debug.Log("Exit Info Popup");
-                this.GetSystem<UISystem>().CloseUI(nameof(UIInfoPopupPanel));
+                this.GetSystem<UISystem>().CloseUI("UIInfoPopupPanel");
             });
         }
     }

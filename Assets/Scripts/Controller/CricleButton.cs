@@ -41,7 +41,7 @@ namespace QFramework.Example
 
             BagButton.onClick.AddListener(() =>
             {
-                this.GetSystem<UISystem>().OpenBagUI();
+                this.GetSystem<UISystem>().OpenUI("UIBagPanel");
             });
 
             ClearCricleButton.onClick.AddListener(() =>

@@ -13,10 +13,10 @@ namespace QFramework.Example
             canvasTrans = Object.FindObjectOfType<Canvas>().transform;
         }
 
-        public GameObject OpenUI(string name)
+        public GameObject OpenUI(string name, string layoutName = "Layout_Middle")
         {
             if (openedWindow.ContainsKey(name)) return null;
-            var go = Object.Instantiate(Resources.Load<GameObject>($"UIPrefabs/{name}"), canvasTrans);
+            var go = Object.Instantiate(Resources.Load<GameObject>($"UIPrefabs/{name}"), canvasTrans.Find(layoutName));
             openedWindow[name] = go;
 
             return (GameObject)go;
@@ -30,13 +30,6 @@ namespace QFramework.Example
 
             go.GetComponent<InfoPopup>().Title.text = strTitle;
             go.GetComponent<InfoPopup>().Content.text = strContent;
-        }
-
-        public void OpenBagUI()
-        {
-            if (openedWindow.ContainsKey(nameof(Bag))) return;
-            var go = Object.Instantiate(Resources.Load<GameObject>($"UIPrefabs/UIBagPanel"), canvasTrans);
-            openedWindow[nameof(Bag)] = go;
         }
 
         public void CloseUI(string name)

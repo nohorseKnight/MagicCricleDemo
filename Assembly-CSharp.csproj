@@ -103,7 +103,6 @@
      <Compile Include="Assets\Scripts\Controller\CricleButton.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitWithResKitInit.cs" />
      <Compile Include="Assets\Scripts\Controller\Bag.cs" />
-     <Compile Include="Assets\Scripts\Controller\DrawMagicCricle.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\1.LoadAssetBundleResExample\AssetBundleResExample.cs" />
      <Compile Include="Assets\Scripts\MagicCricleContext.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\2.SingletonProperty\SingletonProperty.cs" />
@@ -144,6 +143,11 @@
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\2.LoadResourcesResExample\LoadResourcesResExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\DelayExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\AudioKitWithResKitInit.cs" />
+     <Compile Include="Assets\Scripts\Controller\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Controller\GameStart.cs" />
+     <Compile Include="Assets\Scripts\Controller\UpsideButton.cs" />
+     <Compile Include="Assets\Scripts\Model\EnemyModel.cs" />
+     <Compile Include="Assets\Scripts\Model\MapModel.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

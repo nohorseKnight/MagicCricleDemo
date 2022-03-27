@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\Command\ShowMagicCricleDetailCommand.cs" />
      <Compile Include="Assets\QFramework\Toolkits\AudioKit\Example\Audio\AudioTest.cs" />
      <Compile Include="Assets\Scripts\Controller\StarNumber.cs" />
+     <Compile Include="Assets\Scripts\Model\EnemyModel.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\0.Singleton\Singleton.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\UIKitExample_LoadFromResources\Scripts\UIKitExample_LoadFromResoruces.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIMenuPanel.Designer.cs" />
@@ -111,7 +112,9 @@
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\7.LoadSceneExample\ResKitExampleMain.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\TimelineNodeExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\ManagerOfManagersExample.cs" />
+     <Compile Include="Assets\Scripts\Controller\UpsideButton.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\TestNodeSystemGC\TestNodeSystemGC.cs" />
+     <Compile Include="Assets\Scripts\Controller\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Command\SpriteHighLightCommand.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\SpawnNodeExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\ResKitUIPanelTester.cs" />
@@ -127,6 +130,7 @@
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UISectionPanel.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\RefCounter\RefCounterExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\10.CustomResExample\CustomResExample.cs" />
+     <Compile Include="Assets\Scripts\Controller\GameStart.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\3.MonoSingletonProperty\MonoSingletonProperty.cs" />
      <Compile Include="Assets\Scripts\UI\UIBaseDragUnitPanel.cs" />
      <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\EnemyEvent.cs" />
@@ -143,11 +147,8 @@
      <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\2.LoadResourcesResExample\LoadResourcesResExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\DelayExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\AudioKitWithResKitInit.cs" />
-     <Compile Include="Assets\Scripts\Controller\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\Controller\GameStart.cs" />
-     <Compile Include="Assets\Scripts\Controller\UpsideButton.cs" />
-     <Compile Include="Assets\Scripts\Model\EnemyModel.cs" />
      <Compile Include="Assets\Scripts\Model\MapModel.cs" />
+     <Compile Include="Assets\Scripts\Controller\EnemyView.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

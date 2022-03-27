@@ -10,6 +10,7 @@ namespace QFramework.Example
             RegisterModel(new MagicCricleModel());
             RegisterModel(new BagModel());
             RegisterModel(new GameRuntimeModel());
+            RegisterModel(new EnemyModel());
         }
     }
 }

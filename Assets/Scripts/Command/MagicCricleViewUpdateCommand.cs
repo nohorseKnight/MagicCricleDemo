@@ -27,13 +27,13 @@ namespace QFramework.Example
                 switch (_actOnCricle)
                 {
                     case CircleNumer.Cricle_0:
-                        Model.FirstCricleElement.Value = MagicCricleModel.Element.GROUND + (_inputUnitStyle - UnitStyle.LINE_GROUND);
+                        Model.FirstCricleElement.Value = Element.GROUND + (_inputUnitStyle - UnitStyle.LINE_GROUND);
                         break;
                     case CircleNumer.Cricle_1:
-                        Model.SecondCricleElement.Value = MagicCricleModel.Element.GROUND + (_inputUnitStyle - UnitStyle.LINE_GROUND);
+                        Model.SecondCricleElement.Value = Element.GROUND + (_inputUnitStyle - UnitStyle.LINE_GROUND);
                         break;
                     case CircleNumer.Cricle_2:
-                        Model.ThirdCricleElement.Value = MagicCricleModel.Element.GROUND + (_inputUnitStyle - UnitStyle.LINE_GROUND);
+                        Model.ThirdCricleElement.Value = Element.GROUND + (_inputUnitStyle - UnitStyle.LINE_GROUND);
                         break;
                     default:
                         break;
@@ -43,7 +43,7 @@ namespace QFramework.Example
             if (_inputUnitStyle >= UnitStyle.CORE_GROUND && _inputUnitStyle <= UnitStyle.CORE_LIGHT && _actOnCricle == CircleNumer.Cricle_0)
             {
                 Debug.Log("CORE_GROUND ~ CORE_LIGHT Cricle_0");
-                Model.FirstCricleElement.Value = MagicCricleModel.Element.GROUND + (_inputUnitStyle - UnitStyle.CORE_GROUND);
+                Model.FirstCricleElement.Value = Element.GROUND + (_inputUnitStyle - UnitStyle.CORE_GROUND);
             }
 
             if (_inputUnitStyle >= UnitStyle.STAR_3 && _inputUnitStyle <= UnitStyle.STAR_9)
@@ -52,13 +52,13 @@ namespace QFramework.Example
                 switch (_actOnCricle)
                 {
                     case CircleNumer.Cricle_0:
-                        // Model.CricleStar_0.Value = MagicCricleModel.Star.STAR_3 + (_inputUnitStyle - UnitStyle.STAR_3);
+                        // Model.CricleStar_0.Value = Star.STAR_3 + (_inputUnitStyle - UnitStyle.STAR_3);
                         break;
                     case CircleNumer.Cricle_1:
-                        Model.CricleStar_1.Value = MagicCricleModel.Star.STAR_3 + (_inputUnitStyle - UnitStyle.STAR_3);
+                        Model.CricleStar_1.Value = Star.STAR_3 + (_inputUnitStyle - UnitStyle.STAR_3);
                         break;
                     case CircleNumer.Cricle_2:
-                        Model.CricleStar_2.Value = MagicCricleModel.Star.STAR_3 + (_inputUnitStyle - UnitStyle.STAR_3);
+                        Model.CricleStar_2.Value = Star.STAR_3 + (_inputUnitStyle - UnitStyle.STAR_3);
                         break;
                     default:
                         break;

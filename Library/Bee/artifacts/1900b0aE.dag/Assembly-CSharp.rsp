@@ -456,18 +456,7 @@
 "Assets/Scripts/Model/MagicCricleModel.cs"
 "Assets/Scripts/Model/MapModel.cs"
 "Assets/Scripts/System/UISystem.cs"
-"Assets/Scripts/UI/UIBaseDragUnitPanel.cs"
-"Assets/Scripts/UI/UIBaseDragUnitPanel.Designer.cs"
-"Assets/Scripts/UI/UIElementSelectPanel.cs"
-"Assets/Scripts/UI/UIElementSelectPanel.Designer.cs"
-"Assets/Scripts/UI/UIHomePanel.cs"
-"Assets/Scripts/UI/UIHomePanel.Designer.cs"
-"Assets/Scripts/UI/UIInfoPopupPanel.cs"
-"Assets/Scripts/UI/UIInfoPopupPanel.Designer.cs"
-"Assets/Scripts/UI/UIMainSelectPanel.cs"
-"Assets/Scripts/UI/UIMainSelectPanel.Designer.cs"
-"Assets/Scripts/UI/UIUpsidePanel.cs"
-"Assets/Scripts/UI/UIUpsidePanel.Designer.cs"
+"Assets/Scripts/Util.cs"
 -langversion:8.0
 
 /deterministic

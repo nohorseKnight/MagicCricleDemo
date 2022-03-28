@@ -24,9 +24,9 @@ namespace QFramework.Example
 
         public void OpenUIInfoPopupPanel(string strTitle, string strContent)
         {
-            if (openedWindow.ContainsKey(nameof(UIInfoPopupPanel))) return;
-            var go = Object.Instantiate(Resources.Load<GameObject>($"UIPrefabs/{nameof(UIInfoPopupPanel)}"), canvasTrans);
-            openedWindow[nameof(UIInfoPopupPanel)] = go;
+            if (openedWindow.ContainsKey("UIInfoPopupPanel")) return;
+            var go = Object.Instantiate(Resources.Load<GameObject>("UIPrefabs/UIInfoPopupPanel"), canvasTrans);
+            openedWindow["UIInfoPopupPanel"] = go;
 
             go.GetComponent<InfoPopup>().Title.text = strTitle;
             go.GetComponent<InfoPopup>().Content.text = strContent;

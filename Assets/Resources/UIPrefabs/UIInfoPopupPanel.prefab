@@ -352,7 +352,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157498147362890406}
-  - component: {fileID: 2595805162167177411}
   - component: {fileID: 579506086591238388}
   m_Layer: 0
   m_Name: UIInfoPopupPanel
@@ -384,20 +383,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2595805162167177411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3214932908165215071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37165ceae4d00a04aaf0948980db4d8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Title: {fileID: 563487275}
-  Content: {fileID: 1499928869}
 --- !u!114 &579506086591238388
 MonoBehaviour:
   m_ObjectHideFlags: 0

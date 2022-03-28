@@ -42,65 +42,15 @@ namespace QFramework.Example
 
             float damage = 0;
 
-            float[,] elementTable = new float[9, 9]{
-                {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f},
-                {0.0f, 1.5f, 1.4f, 1.2f, 1.2f, 1.4f, 1.0f, 1.0f, 0.5f},
-                {0.0f, 0.5f, 1.5f, 1.4f, 1.0f, 1.0f, 1.4f, 0.5f, 1.0f},
-                {0.0f, 1.2f, 1.0f, 1.5f, 0.5f, 1.0f, 0.5f, 1.4f, 1.0f},
-                {0.0f, 1.4f, 0.5f, 1.4f, 1.5f, 0.5f, 0.5f, 0.5f, 1.4f},
-                {0.0f, 1.4f, 1.0f, 0.5f, 0.5f, 1.5f, 1.4f, 0.5f, 1.0f},
-                {0.0f, 1.0f, 1.4f, 0.5f, 1.4f, 0.5f, 1.5f, 1.4f, 1.2f},
-                {0.0f, 1.4f, 0.5f, 1.2f, 0.5f, 0.5f, 1.4f, 1.5f, 1.0f},
-                {0.0f, 0.5f, 1.4f, 1.2f, 1.0f, 1.0f, 1.4f, 1.0f, 1.5f}
-            };
+            float m1 = c1 == Element.NONE ? 0 : Util.elementTable[(int)c0, (int)c1];
+            float m2 = c2 == Element.NONE ? 1 : Util.elementTable[(int)c0, (int)c2];
 
-            float m1 = c1 == Element.NONE ? 0 : elementTable[(int)c0, (int)c1];
-            float m2 = c2 == Element.NONE ? 1 : elementTable[(int)c0, (int)c2];
-
-            damage = (1 + m1 * CountStarValueByOrder(arr1)) * m2 * CountStarValueByInterval(arr2);
+            damage = (1 + m1 * (1 + 0.1f * arr1.Length) * Util.CountStarValueByOrder(arr1)) * m2 * (1 + 0.1f * arr2.Length) * Util.CountStarValueByInterval(arr2);
 
             Debug.Log($"FirstCricleElement:{c0.ToString()}, SecondCricleElement:{c1.ToString()}, ThirdCricleElement:{c2.ToString()}");
             Debug.Log($"m1:{m1}, m2:{m2}, damage:{damage}");
 
             return damage;
-        }
-
-        //for testing
-        int CountStarValueByInterval(int[] arr)
-        {
-            int result = 0;
-            result = arr[arr.Length - 2] + arr[0];
-            if (result > arr[arr.Length - 1] + arr[1])
-            {
-                result = arr[arr.Length - 1] + arr[1];
-            }
-            for (int i = 0; i < arr.Length - 2; i++)
-            {
-                if (result > arr[i] + arr[i + 2])
-                {
-                    result = arr[i] + arr[i + 2];
-                }
-            }
-
-            return result;
-        }
-
-        //for testing
-        int CountStarValueByOrder(int[] arr)
-        {
-            int result = 0;
-            result = arr[arr.Length - 1] + arr[0];
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                if (result > arr[i] + arr[i + 1])
-                {
-                    result = arr[i] + arr[i + 1];
-                }
-            }
-
-            Debug.Log("CountStarValueByOrder result: " + result);
-
-            return result;
         }
     }
 }

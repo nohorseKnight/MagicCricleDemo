@@ -642,6 +642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIMapPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4592009171542672957, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4592009171542672958, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -726,25 +730,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4592009172262612198, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172262612198, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172409163429, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172409163429, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172409163429, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172409163429, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172685726309, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592009172685726309, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 4592009173008635413, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00006752524
+      value: 0.0000404343
       objectReference: {fileID: 0}
     - target: {fileID: 4592009173150251113, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592009173150251113, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592009173203393979, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592009173203393979, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159651ded2caf614298c98cc34f9ec05, type: 3}

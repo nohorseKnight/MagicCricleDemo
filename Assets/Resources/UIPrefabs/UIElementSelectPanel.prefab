@@ -243,7 +243,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6340606361928324474}
-  - component: {fileID: -8141162219853170398}
   m_Layer: 0
   m_Name: UIElementSelectPanel
   m_TagString: Untagged
@@ -272,17 +271,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -640}
   m_SizeDelta: {x: 720, y: 340}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &-8141162219853170398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8543086821107286390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bf66edf51af124f91158fc863391b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GridLayoutGroup: {fileID: 6698325427111273097}
-  TextMesh: {fileID: 3919692717092401341}

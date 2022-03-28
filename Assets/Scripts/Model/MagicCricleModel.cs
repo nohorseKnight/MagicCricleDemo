@@ -15,7 +15,6 @@ namespace QFramework.Example
     }
     public class MagicCricleModel : AbstractModel
     {
-
         public GameObject MagicCricleObject;
         public BindableProperty<Element> FirstCricleElement = new BindableProperty<Element>();
         public BindableProperty<Element> SecondCricleElement = new BindableProperty<Element>();
@@ -336,22 +335,10 @@ namespace QFramework.Example
 
             float damage = 0;
 
-            float[,] elementTable = new float[9, 9]{
-                {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f},
-                {0.0f, 1.5f, 1.4f, 1.2f, 1.2f, 1.4f, 1.0f, 1.0f, 0.5f},
-                {0.0f, 0.5f, 1.5f, 1.4f, 1.0f, 1.0f, 1.4f, 0.5f, 1.0f},
-                {0.0f, 1.2f, 1.0f, 1.5f, 0.5f, 1.0f, 0.5f, 1.4f, 1.0f},
-                {0.0f, 1.4f, 0.5f, 1.4f, 1.5f, 0.5f, 0.5f, 0.5f, 1.4f},
-                {0.0f, 1.4f, 1.0f, 0.5f, 0.5f, 1.5f, 1.4f, 0.5f, 1.0f},
-                {0.0f, 1.0f, 1.4f, 0.5f, 1.4f, 0.5f, 1.5f, 1.4f, 1.2f},
-                {0.0f, 1.4f, 0.5f, 1.2f, 0.5f, 0.5f, 1.4f, 1.5f, 1.0f},
-                {0.0f, 0.5f, 1.4f, 1.2f, 1.0f, 1.0f, 1.4f, 1.0f, 1.5f}
-            };
+            float m1 = c1 == Element.NONE ? 0 : Util.elementTable[(int)c0, (int)c1];
+            float m2 = c2 == Element.NONE ? 1 : Util.elementTable[(int)c0, (int)c2];
 
-            float m1 = c1 == Element.NONE ? 0 : elementTable[(int)c0, (int)c1];
-            float m2 = c2 == Element.NONE ? 1 : elementTable[(int)c0, (int)c2];
-
-            damage = (CountCoreStarValue() + m1 * CountStarValueByOrder(arr1)) * m2 * CountStarValueByInterval(arr2);
+            damage = (CountCoreStarValue() + m1 * (1 + 0.1f * arr1.Length) * CountStarValueByOrder(arr1)) * m2 * (1 + 0.1f * arr2.Length) * CountStarValueByInterval(arr2);
 
             Debug.Log($"FirstCricleElement:{c0.ToString()}, SecondCricleElement:{c1.ToString()}, ThirdCricleElement:{c2.ToString()}");
             Debug.Log($"m1:{m1}, m2:{m2}, damage:{damage}");

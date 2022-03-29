@@ -138,6 +138,7 @@
      <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\DelayExample.cs" />
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\AudioKitWithResKitInit.cs" />
      <Compile Include="Assets\Scripts\Model\MapModel.cs" />
+     <Compile Include="Assets\Scripts\Controller\MapView.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

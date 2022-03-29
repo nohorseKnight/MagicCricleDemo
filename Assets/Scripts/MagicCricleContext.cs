@@ -11,6 +11,7 @@ namespace QFramework.Example
             RegisterModel(new BagModel());
             RegisterModel(new GameRuntimeModel());
             RegisterModel(new EnemyModel());
+            RegisterModel(new MapModel());
         }
     }
 }

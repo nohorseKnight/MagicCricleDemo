@@ -108,7 +108,6 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/QFramework/Toolkits/PackageKit/Editor/Markdown/Scripts/Renderer/Markdig.dll"
 -r:"D:/Unity/2021.1.19f1c1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/Unity/2021.1.19f1c1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Unity/2021.1.19f1c1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

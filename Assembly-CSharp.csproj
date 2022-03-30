@@ -36,109 +36,33 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\DelaySequenceExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIRootTest\UIRootTestExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\3.CustomAction\CustomActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\EventActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\UIKitExample_LoadFromResources\Scripts\UI\UISomePanelFromResources.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\7.Timeline\TimelineExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\10.MultiPanelExample\MultiPanelExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\0.BasicUsage\ResKitExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\SayHelloWorldActionExample.cs" />
      <Compile Include="Assets\Scripts\Controller\Cricle.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UISettingPanel.Designer.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UISectionPanel.Designer.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\4.ResLoaderRelateUnloadAsset\ResLoaderRelateUnloadAssetExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\8.NetImageExample\ImageLoaderExample.cs" />
      <Compile Include="Assets\Scripts\Controller\EnemyView.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\AudioKit\Example\AudioExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\QEventSystemExample\EventSenderExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\8.DelayFrameAction\DelayFrameActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\4.DotweenAction\DotweenActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\2.SequenceNode\SequenceNodeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\MgrId.cs" />
      <Compile Include="Assets\Scripts\Model\MagicCricleModel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\NodeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\0.DelayNode\DelayNodeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\8.NetImageExample\NetImageExample.cs" />
      <Compile Include="Assets\Scripts\Model\GameRuntimeModel.cs" />
      <Compile Include="Assets\Scripts\Model\BagModel.cs" />
      <Compile Include="Assets\Scripts\Command\InputMagicNumberCommand.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\RepeatNodeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\3.LoadSceneExample\LoadSceneExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\Controller\BaseController.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIGamePanel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UISettingPanel.cs" />
      <Compile Include="Assets\Scripts\Controller\ShowingMagicCricleDetail.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\5.PersistentMonoSingleton\PersistentMonoSingletonExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\TableKit\Example\TableKitExample.cs" />
      <Compile Include="Assets\Scripts\Util.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\5.LoadSpriteAtlasExample\TestSpriteAtlas.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Custom\HelloWorldActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\UntilActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Custom\NodeActionLifetimeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIMenuPanel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\1.MonoSingleton\MonoSingletonExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\FSM\EnumStateMachineExample.cs" />
      <Compile Include="Assets\Scripts\System\UISystem.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\5.WWWAction\WWWActionExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Example.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\UIKitExample_LoadFromResources\Scripts\UI\UISomePanelFromResources.Designer.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\1.EventNode\EventNodeExample.cs" />
      <Compile Include="Assets\Scripts\Controller\InfoPopup.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\PoolKit\Example\CallPool.cs" />
      <Compile Include="Assets\Scripts\Command\ShowMagicCricleDetailCommand.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\AudioKit\Example\Audio\AudioTest.cs" />
      <Compile Include="Assets\Scripts\Controller\StarNumber.cs" />
      <Compile Include="Assets\Scripts\Model\EnemyModel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\0.Singleton\Singleton.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\UIKitExample_LoadFromResources\Scripts\UIKitExample_LoadFromResoruces.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIMenuPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\Controller\MapView.cs" />
      <Compile Include="Assets\Scripts\Controller\CompletedMagicCricleUnit.cs" />
      <Compile Include="Assets\Scripts\Controller\DragUnit.cs" />
      <Compile Include="Assets\Scripts\Controller\CricleButton.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitWithResKitInit.cs" />
      <Compile Include="Assets\Scripts\Controller\Bag.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\1.LoadAssetBundleResExample\AssetBundleResExample.cs" />
      <Compile Include="Assets\Scripts\MagicCricleContext.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\2.SingletonProperty\SingletonProperty.cs" />
      <Compile Include="Assets\Scripts\Command\MagicCricleViewUpdateCommand.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\7.LoadSceneExample\ResKitExampleMain.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\TimelineNodeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\ManagerOfManagersExample.cs" />
      <Compile Include="Assets\Scripts\Controller\UpsideButton.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\TestNodeSystemGC\TestNodeSystemGC.cs" />
      <Compile Include="Assets\Scripts\Controller\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Command\SpriteHighLightCommand.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Node\SpawnNodeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\ResKitUIPanelTester.cs" />
      <Compile Include="Assets\Scripts\Command\AddUnitToBagGridCommand.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIABCPanel.Designer.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIGamePanel.Designer.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\10.MultiPanelExample\Scripts\UI\UIMultiPanel.Designer.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\NodeSystemExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\QEventSystemExample\EventReceiverExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UIABCPanel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\FSM\ActionKitFSMExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\4.MonoSingletonPath\MonoSingletonPath.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\UI\UISectionPanel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\RefCounter\RefCounterExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\10.CustomResExample\CustomResExample.cs" />
      <Compile Include="Assets\Scripts\Controller\GameStart.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\3.MonoSingletonProperty\MonoSingletonProperty.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\EnemyEvent.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\6.TimerDemo\TimerExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\10.MultiPanelExample\Scripts\UI\UIMultiPanel.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\ActionLifetimeExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\UIExample\Scripts\Util\UIEventID.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SingletonKit\Example\6.ReplaceableMonoSingleton\ReplaceableMonoSingletonExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\UIKit\Example\11.ManagerOfManagersExample\Enemy.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ResKit\Example\2.LoadResourcesResExample\LoadResourcesResExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\ActionKit\Example\Action\DelayExample.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\AudioKitWithResKitInit.cs" />
      <Compile Include="Assets\Scripts\Model\MapModel.cs" />
-     <Compile Include="Assets\Scripts\Controller\MapView.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -859,65 +783,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ResKit.csproj">
-      <Project>{d68783f3-ab71-3c97-a858-da262f09be80}</Project>
-      <Name>ResKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="SingletonKit.csproj">
-      <Project>{190ca89f-6a0c-314f-f360-504241ec07b2}</Project>
-      <Name>SingletonKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="IOCKit.csproj">
-      <Project>{35f76867-8725-2f28-46db-0a3fb0d9f936}</Project>
-      <Name>IOCKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="UIKit.csproj">
-      <Project>{ce428be5-d4ed-9f9e-195c-8d83c5916442}</Project>
-      <Name>UIKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="ActionKit.csproj">
-      <Project>{7ffcdd63-3805-5ac4-53ba-810a1ad34a9b}</Project>
-      <Name>ActionKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="PoolKit.csproj">
-      <Project>{dfcc2fca-22a8-058a-de4b-e1b8a27dc674}</Project>
-      <Name>PoolKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="ResKit.Editor.csproj">
-      <Project>{56a2f493-acf7-6f5f-f9e1-44a9bbe3c02c}</Project>
-      <Name>ResKit.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="TableKit.csproj">
-      <Project>{29b75abf-e463-3582-5c38-50650b8464be}</Project>
-      <Name>TableKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="AudioKit.csproj">
-      <Project>{e487f822-22ed-e4dc-e977-1b5a09ed7efe}</Project>
-      <Name>AudioKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="LogKit.csproj">
-      <Project>{47cdb439-6ba1-181b-e2cd-61b31d6799b2}</Project>
-      <Name>LogKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="EditorKit.csproj">
-      <Project>{cd49f700-5148-2514-9d4b-935a9eca87ed}</Project>
-      <Name>EditorKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="ExtensionKit.csproj">
-      <Project>{baf4fa77-5748-b5b4-947c-2dbf12163e55}</Project>
-      <Name>ExtensionKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="UIKit.Editor.csproj">
-      <Project>{791226fc-66af-e6c2-5c5a-bed05b1dcea4}</Project>
-      <Name>UIKit.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="QFramework.csproj">
       <Project>{ce29518d-c68c-8e43-0750-b1b73c349b62}</Project>
       <Name>QFramework</Name>
-    </ProjectReference>
-    <ProjectReference Include="PackageKit.csproj">
-      <Project>{608de33c-3450-18d9-d79c-c6cb280d7f65}</Project>
-      <Name>PackageKit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

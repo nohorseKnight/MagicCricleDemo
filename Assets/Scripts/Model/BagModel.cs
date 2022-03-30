@@ -12,6 +12,10 @@ namespace QFramework.Example
         {
             AddIntoList(Element.FIRE, Element.FIRE, Element.FIRE, Star.STAR_3, Star.STAR_6, new int[] { 1, 2, 3 }, new int[] { 1, 2, 3, 4, 4, 6 });
             AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
         }
 
         public string BagInfo()

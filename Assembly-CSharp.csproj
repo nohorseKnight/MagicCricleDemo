@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\System\UISystem.cs" />
      <Compile Include="Assets\Scripts\Controller\InfoPopup.cs" />
      <Compile Include="Assets\Scripts\Command\ShowMagicCricleDetailCommand.cs" />
+     <Compile Include="Assets\Scripts\Controller\HpNumber.cs" />
      <Compile Include="Assets\Scripts\Controller\StarNumber.cs" />
      <Compile Include="Assets\Scripts\Model\EnemyModel.cs" />
      <Compile Include="Assets\Scripts\Controller\MapView.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\Command\AddUnitToBagGridCommand.cs" />
      <Compile Include="Assets\Scripts\Controller\GameStart.cs" />
      <Compile Include="Assets\Scripts\Model\MapModel.cs" />
+     <Compile Include="Assets\Scripts\Controller\TipsView.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -733,14 +735,14 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>D:/UnityProject/QframeworkTest01/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+        <HintPath>D:/UnityProject/QframeworkTest01/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:/UnityProject/QframeworkTest01/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
         <HintPath>D:/UnityProject/QframeworkTest01/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>D:/UnityProject/QframeworkTest01/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
         <HintPath>D:/UnityProject/QframeworkTest01/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>

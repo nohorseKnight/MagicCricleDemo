@@ -279,9 +279,6 @@
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
         <HintPath>D:/UnityProject/QframeworkTest01/Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Markdig">
-        <HintPath>D:/UnityProject/QframeworkTest01/Assets/QFramework/Toolkits/PackageKit/Editor/Markdown/Scripts/Renderer/Markdig.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>D:/UnityProject/QframeworkTest01/Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>

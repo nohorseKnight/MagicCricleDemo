@@ -16,14 +16,14 @@ namespace QFramework.Example
 
             if (gameRuntimeModel.GameState == GameRuntimeModel.State.Fighting)
             {
-                this.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(0, -440, 0);
-                this.GetComponent<RectTransform>().sizeDelta = new Vector2(720, 400);
+                this.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(0, -340, 0);
+                this.GetComponent<RectTransform>().sizeDelta = new Vector2(720, 600);
                 ExitButton.gameObject.SetActive(false);
             }
             else
             {
                 this.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(0, 0, 0);
-                this.GetComponent<RectTransform>().sizeDelta = new Vector2(650, 400);
+                this.GetComponent<RectTransform>().sizeDelta = new Vector2(650, 600);
                 ExitButton.gameObject.SetActive(true);
             }
 

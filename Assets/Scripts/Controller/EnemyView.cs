@@ -31,6 +31,7 @@ namespace QFramework.Example
                 gameRuntimeModel.GameState.Value = GameRuntimeModel.State.MainMenu;
                 this.GetSystem<UISystem>().CloseUI("UIBagPanel");
                 this.GetSystem<UISystem>().CloseUI("Enemy");
+                this.GetSystem<UISystem>().CloseUI("UIEnemyTurnCoverPanel");
                 this.GetSystem<UISystem>().OpenUI("UIMainMenuPanel");
             });
         }

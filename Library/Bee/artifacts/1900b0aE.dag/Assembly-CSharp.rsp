@@ -352,6 +352,7 @@
 "Assets/Scripts/Controller/Cricle.cs"
 "Assets/Scripts/Controller/CricleButton.cs"
 "Assets/Scripts/Controller/DragUnit.cs"
+"Assets/Scripts/Controller/EnemyTurnsCoverView.cs"
 "Assets/Scripts/Controller/EnemyView.cs"
 "Assets/Scripts/Controller/GameStart.cs"
 "Assets/Scripts/Controller/HpNumber.cs"

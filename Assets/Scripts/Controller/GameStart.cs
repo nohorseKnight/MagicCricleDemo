@@ -15,7 +15,7 @@ namespace QFramework.Example
             EnemyModel enemyModel = this.GetModel<EnemyModel>();
 
             gameRuntimeModel.GameState.Value = GameRuntimeModel.State.Fighting;
-            this.GetSystem<UISystem>().OpenUI("UIBagPanel");
+            this.GetSystem<UISystem>().OpenUI("UIBagPanel", "Layout_Bottom");
             enemyModel.EnemyObject.Value = this.GetSystem<UISystem>().OpenUI("Enemy");
         }
     }

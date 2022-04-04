@@ -15,11 +15,11 @@ D:/UnityProject/QframeworkTest01
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-61227
+65360
 Successfully changed project path to: D:/UnityProject/QframeworkTest01
 D:/UnityProject/QframeworkTest01
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 6726.83 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 330.42 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.19f1c1 (5448069cf3b6)
 [Subsystems] Discovering subsystems at path D:/Unity/2021.1.19f1c1/Editor/Data/Resources/UnitySubsystems
@@ -35,9 +35,5 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2021.1.19f1c1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2021.1.19f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2021.1.19f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56676
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
 Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/2021.1.19f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.064523 seconds.
-Native extension for WindowsStandalone target not found

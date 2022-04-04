@@ -26,10 +26,10 @@ namespace QFramework.Example
         protected override void OnInit()
         {
             UIUpsidePanel = GameObject.Find("UIUpsidePanel");
-            HP_max.Value = 100f;
-            HP_value.Value = 100f;
-            MP_max.Value = 100f;
-            MP_value.Value = 100f;
+            HP_max.Value = 1000f;
+            HP_value.Value = 1000f;
+            MP_max.Value = 1000f;
+            MP_value.Value = 1000f;
 
             HP_value.Register(e =>
             {
@@ -56,9 +56,9 @@ namespace QFramework.Example
         {
             // Debug.Log("RefreshUserMP");
             UIUpsidePanel.transform.Find("HPImage").GetComponent<Image>().fillAmount = HP_value.Value / HP_max.Value;
-            UIUpsidePanel.transform.Find("HPImage").Find("HPNumText").GetComponent<UITextMeshPro>().text = $"{HP_value.Value}/{HP_max.Value}";
+            UIUpsidePanel.transform.Find("HPImage").Find("HPNumText").GetComponent<UITextMeshPro>().text = $"{HP_value.Value.ToString("0.0")}/{HP_max.Value}";
             UIUpsidePanel.transform.Find("MPImage").GetComponent<Image>().fillAmount = MP_value.Value / MP_max.Value;
-            UIUpsidePanel.transform.Find("MPImage").Find("MPNumText").GetComponent<UITextMeshPro>().text = $"{MP_value.Value}/{MP_max.Value}";
+            UIUpsidePanel.transform.Find("MPImage").Find("MPNumText").GetComponent<UITextMeshPro>().text = $"{MP_value.Value.ToString("0.0")}/{MP_max.Value}";
         }
     }
 }

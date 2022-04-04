@@ -11,11 +11,17 @@ namespace QFramework.Example
         protected override void OnInit()
         {
             AddIntoList(Element.FIRE, Element.FIRE, Element.FIRE, Star.STAR_3, Star.STAR_6, new int[] { 1, 2, 3 }, new int[] { 1, 2, 3, 4, 4, 6 });
-            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
-            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
-            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
-            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
-            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.THUNDER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.PLANT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+
+            AddIntoList(Element.LIGHT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.WIND, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.FIRE, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.MOUNTAIN, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.PLANT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.THUNDER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.GROUND, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
         }
 
         public string BagInfo()

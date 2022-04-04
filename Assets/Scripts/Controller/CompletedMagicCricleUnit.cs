@@ -26,9 +26,26 @@ namespace QFramework.Example
             UseButton.onClick.AddListener(() =>
             {
                 if (gameRuntimeModel.GameState != GameRuntimeModel.State.Fighting) return;
+
+                this.GetSystem<UISystem>().OpenUI("UIEnemyTurnCoverPanel", "Layout_Bottom");
+
                 enemyModel.ChangingValue = -cricleUnitdata.Item8;
                 enemyModel.AttackedElement.Value = cricleUnitdata.Item1;
-                // enemyModel.EnemyHP_value.Value -= cricleUnitdata.Item8;
+                enemyModel.AttackValue.Value = UnityEngine.Random.Range(50f, 100f);
+
+                Debug.Log($"CompletedMagicCricleUnit {enemyModel.AttackedElement.Value.ToString()}");
+                if (enemyModel.AttackedElement.Value == Element.PLANT)
+                {
+                    Debug.Log("CompletedMagicCricleUnit enemyModel.AttackedElement.Value == Element.PLANT");
+                    gameRuntimeModel.HP_value.Value += (float)cricleUnitdata.Item8 * Util.PLANT_INCREASE_HP;
+                }
+                else if (enemyModel.AttackedElement.Value == Element.WATER)
+                {
+                    Debug.Log("CompletedMagicCricleUnit enemyModel.AttackedElement.Value == Element.WATER");
+                    gameRuntimeModel.MP_value.Value += (float)cricleUnitdata.Item8 * Util.WATER_INCREASE_MP;
+                }
+
+                enemyModel.AttackedElement.Value = Element.NONE;
 
                 bagModel.BagList.Remove(cricleUnitdata);
                 Destroy(gameObject);

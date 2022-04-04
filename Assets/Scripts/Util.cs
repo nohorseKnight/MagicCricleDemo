@@ -2,6 +2,14 @@ namespace QFramework.Example
 {
     public class Util
     {
+        public static float LIGHT_DECREASE_ENEMY_DAMAGE = 0.8f;
+        public static float FIRE_INCREASE_PLAYER_DAMAGE = 40f;
+        public static float MOUNTAIN_DECREASE_ENMEY_DAMAGE = 40f;
+        public static float PLANT_INCREASE_HP = 0.5f;
+        public static float WATER_INCREASE_MP = 0.5f;
+        public static float THUNDER_INCREASE_PLAYER_DAMAGE = 1.1f;
+        public static float GROUND_PROBABILITY_AVOID_ENEMY_DAMAGE = 0.1f;
+
         public static float[,] elementTable = new float[9, 9]{
             {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f},
             {0.0f, 1.5f, 1.4f, 1.2f, 1.2f, 1.4f, 1.0f, 1.0f, 0.5f},

@@ -10,8 +10,8 @@ namespace QFramework.Example
     public class AddUnitToBagGridCommand : AbstractCommand
     {
         private Transform _gridTrans;
-        private (Element, Element, Element, Star, Star, int[], int[], float) _unit;
-        public AddUnitToBagGridCommand(Transform gridTrans, (Element, Element, Element, Star, Star, int[], int[], float) unit)
+        private (Element, Element, Element, Star, Star, int[], int[], float, int, int) _unit;
+        public AddUnitToBagGridCommand(Transform gridTrans, (Element, Element, Element, Star, Star, int[], int[], float, int, int) unit)
         {
             _gridTrans = gridTrans;
             _unit = unit;

@@ -26,13 +26,18 @@ namespace QFramework.Example
         protected override void OnInit()
         {
             UIUpsidePanel = GameObject.Find("UIUpsidePanel");
-            HP_max.Value = 1000f;
-            HP_value.Value = 1000f;
-            MP_max.Value = 1000f;
-            MP_value.Value = 1000f;
+            HP_max.Value = Util.MAX_HP;
+            HP_value.Value = Util.MAX_HP;
+            MP_max.Value = Util.MAX_MP;
+            MP_value.Value = Util.MAX_MP;
 
             HP_value.Register(e =>
             {
+                if (HP_value > HP_max)
+                {
+                    HP_value.Value = HP_max;
+                    return;
+                }
                 RefreshUserHPMP();
             });
 
@@ -43,6 +48,11 @@ namespace QFramework.Example
 
             MP_value.Register(e =>
             {
+                if (MP_value > MP_max)
+                {
+                    MP_value = MP_max;
+                    return;
+                }
                 RefreshUserHPMP();
             });
 

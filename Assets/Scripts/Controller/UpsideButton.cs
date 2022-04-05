@@ -17,23 +17,7 @@ namespace QFramework.Example
 
             TipsButton.onClick.AddListener(() =>
             {
-                switch (gameRuntimeModel.GameState.Value)
-                {
-                    case GameRuntimeModel.State.Drawing:
-
-                        break;
-                    case GameRuntimeModel.State.Fighting:
-                        this.GetSystem<UISystem>().OpenUI("UITipsPanel", "Layout_Top");
-                        break;
-                    case GameRuntimeModel.State.MainMenu:
-                        break;
-                    case GameRuntimeModel.State.Map:
-
-                        break;
-                    default:
-                        Debug.Log("TipsButton.onClick.AddListener switch default");
-                        break;
-                }
+                this.GetSystem<UISystem>().OpenUI("UITipsPanel", "Layout_Top");
             });
 
             ReturnButton.onClick.AddListener(() =>

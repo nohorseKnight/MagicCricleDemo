@@ -81,6 +81,8 @@ namespace QFramework.Example
                 Debug.Log($"AttackValue: {AttackValue.Value}");
                 if (AttackValue.Value == 0) return;
 
+                FinalAttackValue = AttackValue.Value;
+
                 if (AttackedElement.Value == Element.MOUNTAIN)
                 {
                     FinalAttackValue -= Util.MOUNTAIN_DECREASE_ENMEY_DAMAGE;
@@ -124,7 +126,7 @@ namespace QFramework.Example
             Debug.Log($"ChangingValue : {ChangingValue}");
             if (ChangingValue == 0) return;
 
-            float f = Util.elementTable[(int)EnemyElement.Value, (int)AttackedElement.Value];
+            float f = 1 / Util.elementTable[(int)EnemyElement.Value, (int)AttackedElement.Value]; //取反
             float changingHp = 0;
 
             string additionalStr = "";
@@ -144,7 +146,7 @@ namespace QFramework.Example
             }
 
             GameObject obj = Object.Instantiate(Resources.Load<GameObject>("UIPrefabs/UIHpNumberPanel"), EnemyObject.Value.transform.Find("Hp"));
-            obj.transform.Find("NumberText").gameObject.GetComponent<UITextMeshPro>().text = $"{ChangingValue} * {f}{additionalStr}";
+            obj.transform.Find("NumberText").gameObject.GetComponent<UITextMeshPro>().text = $"{ChangingValue} * {f.ToString("0.0")}{additionalStr}";
             obj.transform.Find("NumberText").gameObject.GetComponent<UITextMeshPro>().color = new Color(1, 1, 1, 1);
 
             ChangingValue = 0;

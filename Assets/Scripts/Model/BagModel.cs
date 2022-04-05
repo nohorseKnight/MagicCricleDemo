@@ -10,18 +10,18 @@ namespace QFramework.Example
         public ArrayList BagList = new ArrayList();
         protected override void OnInit()
         {
-            AddIntoList(Element.FIRE, Element.FIRE, Element.FIRE, Star.STAR_3, Star.STAR_6, new int[] { 1, 2, 3 }, new int[] { 1, 2, 3, 4, 4, 6 });
-            AddIntoList(Element.THUNDER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
-            AddIntoList(Element.PLANT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 });
+            AddIntoList(Element.FIRE, Element.FIRE, Element.FIRE, Star.STAR_3, Star.STAR_6, new int[] { 1, 2, 3 }, new int[] { 1, 2, 3, 4, 4, 6 }, 0, 1);
+            AddIntoList(Element.THUNDER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4, 4, 6, 7 }, 1, 1);
+            AddIntoList(Element.PLANT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 8, 2, 3, 8 }, new int[] { 1, 2, 3, 4, 4, 6, 7 }, 1, 1);
 
-            AddIntoList(Element.LIGHT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.WIND, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.FIRE, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.MOUNTAIN, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.PLANT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.THUNDER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
-            AddIntoList(Element.GROUND, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 });
+            AddIntoList(Element.LIGHT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.WIND, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.FIRE, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.MOUNTAIN, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.PLANT, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.WATER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.THUNDER, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
+            AddIntoList(Element.GROUND, Element.LIGHT, Element.THUNDER, Star.STAR_4, Star.STAR_7, new int[] { 4, 4, 4, 4 }, new int[] { 3, 3, 3, 3, 3, 3, 3 }, 1, 1);
         }
 
         public string BagInfo()
@@ -35,14 +35,14 @@ namespace QFramework.Example
         }
 
         //for testing
-        void AddIntoList(Element c0, Element c1, Element c2, Star s1, Star s2, int[] a1, int[] a2)
+        void AddIntoList(Element c0, Element c1, Element c2, Star s1, Star s2, int[] a1, int[] a2, int s1_a, int s2_a)
         {
-            float damage = GetDamageValue(c0, c1, c2, a1, a2);
-            BagList.Add((c0, c1, c2, s1, s2, a1, a2, damage));
+            float damage = GetDamageValue(c0, c1, c2, a1, a2, s1_a, s2_a);
+            BagList.Add((c0, c1, c2, s1, s2, a1, a2, damage, s1_a, s2_a));
         }
 
         //for testing
-        float GetDamageValue(Element c0, Element c1, Element c2, int[] arr1, int[] arr2)
+        float GetDamageValue(Element c0, Element c1, Element c2, int[] arr1, int[] arr2, int s1_a, int s2_a)
         {
             if (c0 == Element.NONE)
             {
@@ -55,7 +55,7 @@ namespace QFramework.Example
             float m1 = c1 == Element.NONE ? 0 : Util.elementTable[(int)c0, (int)c1];
             float m2 = c2 == Element.NONE ? 1 : Util.elementTable[(int)c0, (int)c2];
 
-            damage = (1 + m1 * (1 + 0.1f * arr1.Length) * Util.CountStarValueByOrder(arr1)) * m2 * (1 + 0.1f * arr2.Length) * Util.CountStarValueByInterval(arr2);
+            damage = (1 + m1 * (1 + 0.1f * arr1.Length) * Util.CountStarValueByOrder(arr1, s1_a)) * m2 * (1 + 0.1f * arr2.Length) * Util.CountStarValueByInterval(arr2, s2_a);
 
             Debug.Log($"FirstCricleElement:{c0.ToString()}, SecondCricleElement:{c1.ToString()}, ThirdCricleElement:{c2.ToString()}");
             Debug.Log($"m1:{m1}, m2:{m2}, damage:{damage}");

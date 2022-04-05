@@ -35,7 +35,7 @@ namespace QFramework.Example
 
             BagModel Model = this.GetModel<BagModel>();
             Debug.Log(Model.BagInfo());
-            foreach ((Element, Element, Element, Star, Star, int[], int[], float) unit in Model.BagList)
+            foreach ((Element, Element, Element, Star, Star, int[], int[], float, int, int) unit in Model.BagList)
             {
                 this.SendCommand(new AddUnitToBagGridCommand(GridLayoutTranform, unit));
             }

@@ -21,7 +21,9 @@ namespace QFramework.Example
         public BindableProperty<Element> ThirdCricleElement = new BindableProperty<Element>();
         // public BindableProperty<Star> CricleStar_0 = new BindableProperty<Star>();
         public BindableProperty<Star> CricleStar_1 = new BindableProperty<Star>();
+        public int CricleStar_1_additional_value;
         public BindableProperty<Star> CricleStar_2 = new BindableProperty<Star>();
+        public int CricleStar_2_additional_value;
         // public ArrayList CricleStarArray_0 = new ArrayList();
         public ArrayList CricleStarArray_1 = new ArrayList();
         public ArrayList CricleStarArray_2 = new ArrayList();
@@ -112,7 +114,8 @@ namespace QFramework.Example
                 }
 
                 // Debug.Log($"Image/Star/star_1_{(CricleStar_1 - Star.STAR_3 + 3)}");
-                Sprite spr = Resources.Load<Sprite>($"Image/Star/star_1_{(CricleStar_1 - Star.STAR_3 + 3)}");
+                CricleStar_1_additional_value = CricleStar_1 == Star.STAR_3 ? 0 : UnityEngine.Random.Range(0, (CricleStar_1 - Star.STAR_3 + 3));
+                Sprite spr = Resources.Load<Sprite>($"Image/Star/star_1_{(CricleStar_1 - Star.STAR_3 + 3)}_{CricleStar_1_additional_value}");
                 MagicCricleObject.transform.Find("Cricle_1").Find("Star_1").GetComponent<SpriteRenderer>().sprite = spr;
 
                 switch (CricleStar_1)
@@ -157,7 +160,8 @@ namespace QFramework.Example
                     return;
                 }
 
-                Sprite spr = Resources.Load<Sprite>($"Image/Star/star_2_{(CricleStar_2 - Star.STAR_3 + 3)}");
+                CricleStar_2_additional_value = UnityEngine.Random.Range(0, (CricleStar_2 - Star.STAR_3 + 3));
+                Sprite spr = Resources.Load<Sprite>($"Image/Star/star_2_{(CricleStar_2 - Star.STAR_3 + 3)}_{CricleStar_2_additional_value}");
                 MagicCricleObject.transform.Find("Cricle_2").Find("Star_2").GetComponent<SpriteRenderer>().sprite = spr;
 
                 switch (CricleStar_2)
@@ -228,14 +232,14 @@ namespace QFramework.Example
             return arr;
         }
 
-        int CountStarValueByOrder(ArrayList cricleStarArray)
+        int CountStarValueByOrder(ArrayList cricleStarArray, int additional)
         {
-            return Util.CountStarValueByOrder(ObjectArrToIntArr(cricleStarArray));
+            return Util.CountStarValueByOrder(ObjectArrToIntArr(cricleStarArray), additional);
         }
 
-        int CountStarValueByInterval(ArrayList cricleStarArray)
+        int CountStarValueByInterval(ArrayList cricleStarArray, int additional)
         {
-            return Util.CountStarValueByInterval(ObjectArrToIntArr(cricleStarArray));
+            return Util.CountStarValueByInterval(ObjectArrToIntArr(cricleStarArray), additional);
         }
 
         public float CountCoreStarValue()
@@ -245,12 +249,12 @@ namespace QFramework.Example
 
         public float CountMiddleStarValue()
         {
-            return StarValue_1 = CountStarValueByOrder(CricleStarArray_1);
+            return StarValue_1 = CountStarValueByOrder(CricleStarArray_1, CricleStar_1_additional_value);
         }
 
         public float CountOutStarValue()
         {
-            return StarValue_2 = CountStarValueByInterval(CricleStarArray_2);
+            return StarValue_2 = CountStarValueByInterval(CricleStarArray_2, CricleStar_1_additional_value);
         }
 
         public bool IsMagicCricleCompleted()
@@ -262,7 +266,7 @@ namespace QFramework.Example
             return true;
         }
 
-        public (Element c0, Element c1, Element c2, Star s1, Star s2, int[] a1, int[] a2, float damage) GetMagicCricleData()
+        public (Element c0, Element c1, Element c2, Star s1, Star s2, int[] a1, int[] a2, float damage, int s1_a, int s2_a) GetMagicCricleData()
         {
             var c0 = FirstCricleElement.Value;
             var c1 = SecondCricleElement.Value;
@@ -272,7 +276,9 @@ namespace QFramework.Example
             var a1 = ObjectArrToIntArr(CricleStarArray_1);
             var a2 = ObjectArrToIntArr(CricleStarArray_2);
             var damage = AnalyzeDamage();
-            return (c0, c1, c2, s1, s2, a1, a2, damage);
+            var s1_a = CricleStar_1_additional_value;
+            var s2_a = CricleStar_2_additional_value;
+            return (c0, c1, c2, s1, s2, a1, a2, damage, s1_a, s2_a);
         }
 
         public void ClearMagicCricle()
@@ -286,10 +292,10 @@ namespace QFramework.Example
 
         public float AnalyzeDamage()
         {
-            return GetDamageValue(FirstCricleElement.Value, SecondCricleElement.Value, ThirdCricleElement.Value, ObjectArrToIntArr(CricleStarArray_1), ObjectArrToIntArr(CricleStarArray_2));
+            return GetDamageValue(FirstCricleElement.Value, SecondCricleElement.Value, ThirdCricleElement.Value, ObjectArrToIntArr(CricleStarArray_1), ObjectArrToIntArr(CricleStarArray_2), CricleStar_1_additional_value, CricleStar_2_additional_value);
         }
 
-        public float GetDamageValue(Element c0, Element c1, Element c2, int[] arr1, int[] arr2)
+        public float GetDamageValue(Element c0, Element c1, Element c2, int[] arr1, int[] arr2, int s1_a, int s2_a)
         {
             if (c0 == Element.NONE)
             {
@@ -302,7 +308,7 @@ namespace QFramework.Example
             float m1 = c1 == Element.NONE ? 0 : Util.elementTable[(int)c0, (int)c1];
             float m2 = c2 == Element.NONE ? 1 : Util.elementTable[(int)c0, (int)c2];
 
-            damage = (CountCoreStarValue() + m1 * (1 + 0.1f * arr1.Length) * Util.CountStarValueByOrder(arr1)) * m2 * (1 + 0.1f * arr2.Length) * Util.CountStarValueByInterval(arr2);
+            damage = (CountCoreStarValue() + m1 * (1 + 0.1f * arr1.Length) * Util.CountStarValueByOrder(arr1, s1_a)) * m2 * (1 + 0.1f * arr2.Length) * Util.CountStarValueByInterval(arr2, s2_a);
 
             Debug.Log($"FirstCricleElement:{c0.ToString()}, SecondCricleElement:{c1.ToString()}, ThirdCricleElement:{c2.ToString()}");
             Debug.Log($"m1:{m1}, m2:{m2}, damage:{damage}");

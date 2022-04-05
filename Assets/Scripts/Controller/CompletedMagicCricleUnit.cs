@@ -11,7 +11,7 @@ namespace QFramework.Example
         public Button DetailButton;
         public Button UseButton;
         public UITextMeshPro DamageText;
-        public (Element, Element, Element, Star, Star, int[], int[], float) cricleUnitdata;
+        public (Element, Element, Element, Star, Star, int[], int[], float, int, int) cricleUnitdata;
         void Start()
         {
             BagModel bagModel = this.GetModel<BagModel>();

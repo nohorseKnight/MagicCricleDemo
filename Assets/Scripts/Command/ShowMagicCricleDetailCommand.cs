@@ -16,7 +16,9 @@ namespace QFramework.Example
         private int[] _a1;
         private int[] _a2;
         private float _damage;
-        public ShowMagicCricleDetailCommand((Element, Element, Element, Star, Star, int[], int[], float) data)
+        private int _s1_a;
+        private int _s2_a;
+        public ShowMagicCricleDetailCommand((Element, Element, Element, Star, Star, int[], int[], float, int, int) data)
         {
             _c0 = data.Item1;
             _c1 = data.Item2;
@@ -26,6 +28,8 @@ namespace QFramework.Example
             _a1 = data.Item6;
             _a2 = data.Item7;
             _damage = data.Item8;
+            _s1_a = data.Item9;
+            _s2_a = data.Item10;
         }
         protected override void OnExecute()
         {
@@ -34,14 +38,14 @@ namespace QFramework.Example
             SetSprite(obj.transform.Find("Cricle_2").GetComponent<Image>(), (int)_c2, $"Image/Ring/Cricle_2_00{_c2 - Element.GROUND}");
             SetSprite(obj.transform.Find("Cricle_1").GetComponent<Image>(), (int)_c1, $"Image/Ring/Cricle_1_00{_c1 - Element.GROUND}");
             SetSprite(obj.transform.Find("Cricle_0").GetComponent<Image>(), (int)_c0, $"Image/Ring/Cricle_0_00{_c0 - Element.GROUND}");
-            SetSprite(obj.transform.Find("Cricle_1").Find("Star_1").GetComponent<Image>(), (int)_s1, $"Image/Star/star_1_{_s1 - Star.STAR_3 + 3}");
-            SetSprite(obj.transform.Find("Cricle_2").Find("Star_2").GetComponent<Image>(), (int)_s2, $"Image/Star/star_2_{_s2 - Star.STAR_3 + 3}");
+            SetSprite(obj.transform.Find("Cricle_1").Find("Star_1").GetComponent<Image>(), (int)_s1, $"Image/Star/star_1_{_s1 - Star.STAR_3 + 3}_{_s1_a}");
+            SetSprite(obj.transform.Find("Cricle_2").Find("Star_2").GetComponent<Image>(), (int)_s2, $"Image/Star/star_2_{_s2 - Star.STAR_3 + 3}_{_s2_a}");
             SetSprite(obj.transform.Find("Cricle_0").Find("MagicCore").GetComponent<Image>(), (int)_c0, $"Image/ElementIcon/element_0{_c0 - Element.GROUND}");
 
             SetStarNumber(obj.transform.Find("Cricle_1").Find("Star_1"), _s1, _a1);
             SetStarNumber(obj.transform.Find("Cricle_2").Find("Star_2"), _s2, _a2);
 
-            obj.GetComponent<ShowingMagicCricleDetail>().InfoText.text = $"Damage = (1 + {Util.elementTable[(int)_c0, (int)_c1]} * {1.0f + 0.1f * _a1.Length} * {Util.CountStarValueByOrder(_a1)}) * {Util.elementTable[(int)_c0, (int)_c2]} * {1.0f + 0.1f * _a2.Length} * {Util.CountStarValueByInterval(_a2)} = {_damage}";
+            obj.GetComponent<ShowingMagicCricleDetail>().InfoText.text = $"Damage = (1 + {Util.elementTable[(int)_c0, (int)_c1]} * {1.0f + 0.1f * _a1.Length} * {Util.CountStarValueByOrder(_a1, _s1_a)}) * {Util.elementTable[(int)_c0, (int)_c2]} * {1.0f + 0.1f * _a2.Length} * {Util.CountStarValueByInterval(_a2, _s2_a)} = {_damage}";
         }
 
         void SetSprite(Image image, int flag, string path)

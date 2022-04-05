@@ -26,10 +26,10 @@ namespace QFramework.Example
                 Debug.Log("_other == null || _other.tag != StarNumber");
                 return;
             }
-            Sprite[] spr = Resources.LoadAll<Sprite>($"Image/Number/Number_white_0");
+            Sprite[] spr = Resources.LoadAll<Sprite>($"Image/Number/Number_white_hollowed-out");
             Debug.Log(spr.ToString());
             gameRuntimeModel.MP_value.Value += _other.GetComponent<StarNumber>().Value - (_unitStyle - UnitStyle.NUMBER_1 + 1);
-            _other.GetComponent<SpriteRenderer>().sprite = spr[_unitStyle - UnitStyle.NUMBER_1];
+            _other.GetComponent<SpriteRenderer>().sprite = spr[_unitStyle - UnitStyle.NUMBER_1 + 1];
             _other.GetComponent<StarNumber>().Value = _unitStyle - UnitStyle.NUMBER_1 + 1;
 
             if (_other.transform.parent.name == "Star_1")

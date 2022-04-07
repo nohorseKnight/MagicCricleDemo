@@ -10,6 +10,7 @@ namespace QFramework.Example
     {
         public Button TipsButton;
         public Button ReturnButton;
+        public UITextMeshPro ReturnButtonText;
         void Start()
         {
             GameRuntimeModel gameRuntimeModel = this.GetModel<GameRuntimeModel>();
@@ -37,6 +38,11 @@ namespace QFramework.Example
                         gameRuntimeModel.GameState.Value = GameRuntimeModel.State.MainMenu;
                         break;
                     case GameRuntimeModel.State.MainMenu:
+#if UNITY_EDITOR
+                        UnityEditor.EditorApplication.isPlaying = false;
+#else
+                        Application.Quit();
+#endif
                         break;
                     case GameRuntimeModel.State.Map:
                         this.GetSystem<UISystem>().CloseUI("UIMapPanel");
@@ -48,6 +54,19 @@ namespace QFramework.Example
                         break;
                 }
             });
+        }
+
+        void Update()
+        {
+            GameRuntimeModel gameRuntimeModel = this.GetModel<GameRuntimeModel>();
+            if (gameRuntimeModel.GameState.Value == GameRuntimeModel.State.MainMenu)
+            {
+                ReturnButtonText.text = "Exit";
+            }
+            else
+            {
+                ReturnButtonText.text = "Return";
+            }
         }
     }
 }

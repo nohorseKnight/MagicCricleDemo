@@ -9,6 +9,7 @@ namespace QFramework.Example
     {
         void Start()
         {
+            Screen.SetResolution(720, 1280, true);
             // this.GetSystem<UISystem>().OpenUI("UIMainMenuPanel");
 
             GameRuntimeModel gameRuntimeModel = this.GetModel<GameRuntimeModel>();

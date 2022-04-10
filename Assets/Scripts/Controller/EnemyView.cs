@@ -22,8 +22,9 @@ namespace QFramework.Example
             MapModel mapModel = this.GetModel<MapModel>();
 
             BGImage.GetComponent<Image>().sprite = Resources.Load<Sprite>($"Image/Background/{mapModel.PlayerNode.Value.BGPath}");
+            enemyModel.EnemyElement.Value = Element.NONE;
             enemyModel.EnemyElement.Value = mapModel.GetPlayerNodeElement();
-            enemyModel.EnemyHP_value.Value = 100f;
+            enemyModel.EnemyHP_value.Value = 300f;
             HpText.text = $"{enemyModel.EnemyHP_value.Value}";
             DefeatPopup.SetActive(false);
             ForwardButton.onClick.AddListener(() =>

@@ -17,8 +17,8 @@ namespace QFramework.Example
         public float FinalAttackValue;
         protected override void OnInit()
         {
-            EnemyHP_value.Value = 100f;
-            EnemyHP_max.Value = 100f;
+            EnemyHP_value.Value = 300f;
+            EnemyHP_max.Value = 300f;
             ChangingValue = 0;
             EnemyElement.Value = Element.NONE;
             AttackedElement.Value = Element.NONE;
@@ -36,6 +36,7 @@ namespace QFramework.Example
 
             EnemyElement.Register(e =>
             {
+                if (EnemyElement.Value == Element.NONE) return;
                 int imageIndex = UnityEngine.Random.Range(0, 5);
                 string path = "";
                 switch (EnemyElement.Value)
@@ -69,6 +70,7 @@ namespace QFramework.Example
                 }
                 Debug.Log($"path: {path}");
                 EnemyObject.Value.GetComponent<EnemyView>().ViewImage.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
+                // EnemyElement.Value = Element.NONE;
             });
 
             AttackedElement.Register(e =>
@@ -126,6 +128,7 @@ namespace QFramework.Example
             Debug.Log($"ChangingValue : {ChangingValue}");
             if (ChangingValue == 0) return;
 
+            Debug.Log($"EnemyElement.Value : {EnemyElement.Value}, AttackedElement.Value : {AttackedElement.Value}");
             float f = 1 / Util.elementTable[(int)EnemyElement.Value, (int)AttackedElement.Value]; //取反
             float changingHp = 0;
 

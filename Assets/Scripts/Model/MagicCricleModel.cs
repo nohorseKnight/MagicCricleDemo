@@ -189,7 +189,7 @@ namespace QFramework.Example
                         CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(2.4f, 0, 0), new Vector3(0, 0, -90)));
                         CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(1.7f, -1.7f, 0), new Vector3(0, 0, -135)));
                         CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(0, -2.4f, 0), new Vector3(0, 0, -180)));
-                        CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(-1.7f, 1.7f, 0), new Vector3(0, 0, -225)));
+                        CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(-1.7f, -1.7f, 0), new Vector3(0, 0, -225)));
                         CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(-2.4f, 0, 0), new Vector3(0, 0, -270)));
                         CricleStarArray_2.Add(CreateStarNumberObject(MagicCricleObject.transform.Find("Cricle_2").Find("Star_2"), new Vector3(-1.7f, 1.7f, 0), new Vector3(0, 0, -315)));
                         break;

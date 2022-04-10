@@ -32,10 +32,7 @@ namespace QFramework.Example
                         gameRuntimeModel.GameState.Value = GameRuntimeModel.State.MainMenu;
                         break;
                     case GameRuntimeModel.State.Fighting:
-                        this.GetSystem<UISystem>().CloseUI("UIBagPanel");
-                        this.GetSystem<UISystem>().CloseUI("Enemy");
-                        this.GetSystem<UISystem>().OpenUI("UIMainMenuPanel");
-                        gameRuntimeModel.GameState.Value = GameRuntimeModel.State.MainMenu;
+                        this.GetSystem<UISystem>().OpenUIInfoPopupPanel("Error", "Can not return when fighting.");
                         break;
                     case GameRuntimeModel.State.MainMenu:
 #if UNITY_EDITOR

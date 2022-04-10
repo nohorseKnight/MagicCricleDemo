@@ -954,7 +954,7 @@ ScriptsOnlyBuild:
     className: UnityOnDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 2e87e6293a400b951aa3fad9dc328658
+      Hash: 42b559d97fe4a6e6c91a492dbd289a91
     assemblyName: Assembly-CSharp.dll
     namespaceName: QFramework.Example
     className: UpsideButton
@@ -1201,4 +1201,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "D:/\u6E38\u620F\u7D20\u6750\u51C6\u5907\u4E0E\u6574\u7406/\u9B54\u6CD5\u9635/\u65B0\u5EFA\u6587\u4EF6\u5939/QframeworkTest01.exe"
+  playerPath: "D:/\u6E38\u620F\u7D20\u6750\u51C6\u5907\u4E0E\u6574\u7406/\u9B54\u6CD5\u9635/\u65B0\u5EFA\u6587\u4EF6\u5939/MagicCricleDemo.exe"

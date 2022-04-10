@@ -61,6 +61,14 @@ namespace QFramework.Example
             if (other.gameObject.GetComponent<DragUnit>().Style >= UnitStyle.STAR_3 && other.gameObject.GetComponent<DragUnit>().Style <= UnitStyle.STAR_9)
             {
                 other.gameObject.GetComponent<DragUnit>().ActOnCricleNumber = CurrentCircleNumer;
+                if (other.gameObject.GetComponent<DragUnit>().Style >= UnitStyle.STAR_3 && other.gameObject.GetComponent<DragUnit>().Style <= UnitStyle.STAR_5 && CurrentCircleNumer != CircleNumer.Cricle_1)
+                {
+                    other.gameObject.GetComponent<DragUnit>().HintImage.color = new Color(1, 1, 1, 1);
+                }
+                else if (other.gameObject.GetComponent<DragUnit>().Style >= UnitStyle.STAR_6 && other.gameObject.GetComponent<DragUnit>().Style <= UnitStyle.STAR_9 && CurrentCircleNumer != CircleNumer.Cricle_2)
+                {
+                    other.gameObject.GetComponent<DragUnit>().HintImage.color = new Color(1, 1, 1, 1);
+                }
             }
         }
 

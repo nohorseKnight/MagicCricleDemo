@@ -28,7 +28,7 @@ namespace QFramework.Example
         [SerializeField] public UnitStyle Style;
         [SerializeField] public CircleNumer ActOnCricleNumber;
 
-        private Vector3 orignalPos;
+        // private Vector3 orignalPos;
         private RectTransform canvasRec;
         private Transform orignalParent;
         public GameObject Other;
@@ -48,7 +48,7 @@ namespace QFramework.Example
         {
             Debug.Log("OnBeginDrag");
             this.transform.SetParent(canvasRec.transform);
-            orignalPos = this.transform.position;
+            // orignalPos = this.transform.position;
             this.GetComponent<BoxCollider2D>().enabled = true;
 
             ActOnCricleNumber = CircleNumer.NONE;
@@ -63,8 +63,9 @@ namespace QFramework.Example
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            this.transform.position = orignalPos;
             this.transform.SetParent(orignalParent);
+            this.transform.localPosition = new Vector3(0, 0, 0);
+
             this.GetComponent<BoxCollider2D>().enabled = false;
 
             if (Style >= UnitStyle.NUMBER_1 && Style <= UnitStyle.NUMBER_1000)

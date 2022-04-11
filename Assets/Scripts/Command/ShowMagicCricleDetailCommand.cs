@@ -111,7 +111,7 @@ namespace QFramework.Example
                     CreateNumberImage(trans, new Vector3(260f, 0, 0), new Vector3(0, 0, -90), arr[2]);
                     CreateNumberImage(trans, new Vector3(185f, -185f, 0), new Vector3(0, 0, -135), arr[3]);
                     CreateNumberImage(trans, new Vector3(0, -260f, 0), new Vector3(0, 0, -180), arr[4]);
-                    CreateNumberImage(trans, new Vector3(-185f, 185f, 0), new Vector3(0, 0, -225), arr[5]);
+                    CreateNumberImage(trans, new Vector3(-185f, -185f, 0), new Vector3(0, 0, -225), arr[5]);
                     CreateNumberImage(trans, new Vector3(-260f, 0, 0), new Vector3(0, 0, -270), arr[6]);
                     CreateNumberImage(trans, new Vector3(-185f, 185f, 0), new Vector3(0, 0, -315), arr[7]);
                     break;

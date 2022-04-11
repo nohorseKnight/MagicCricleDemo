@@ -34,7 +34,7 @@ namespace QFramework.Example
             GameObject numberObj = Object.Instantiate(Resources.Load<GameObject>("UIPrefabs/UIHpNumberPanel"), this.transform);
             numberObj.transform.Find("NumberText").GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 120, 0);
             numberObj.transform.Find("NumberText").GetComponent<RectTransform>().sizeDelta = new Vector2(400, 300);
-            numberObj.transform.Find("NumberText").gameObject.GetComponent<UITextMeshPro>().text = $"-{enemyModel.FinalAttackValue}";
+            numberObj.transform.Find("NumberText").gameObject.GetComponent<UITextMeshPro>().text = $"-{enemyModel.FinalAttackValue.ToString(".0")}";
             Debug.Log($"enemyDamage : -{enemyModel.FinalAttackValue}");
             gameRuntimeModel.HP_value.Value -= enemyModel.FinalAttackValue;
             numberObj.transform.Find("NumberText").gameObject.GetComponent<UITextMeshPro>().color = new Color(1, 0, 0, 1);
